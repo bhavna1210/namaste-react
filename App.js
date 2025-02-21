@@ -1,8 +1,8 @@
 //- React is a library not a framework, it can be used for small portion of your app, and remaining will be written in some other lang. 
 //- it is just piece of javascript code written by facebook developer.  
 //- it gives simple helpers to make website fast
-//- U can add react in exixting app(jquery,...) just by adding CDN link, for small portion of code in big app, this is the beuty of react 
-//- Framework comes with a lot of bagage
+//- U can add react in existing app(jquery,...) just by adding CDN link, for small portion of code in big app, this is the beuty of react 
+//- Framework comes with a lot of baggage
 //- it is just a library but we can create large application using this small library
 
 
@@ -16,20 +16,20 @@
 //     id: "heading"
 // }, "Welcome from react")
 // //- it is similar to js document.createElement, it takes 3 arguments an element, an object and innerHtml(whatever we want to put inside h1)
-// //- 1st parameter is the type of tag
+// //- 1st parameter is the type of a tag
 // //- 2nd parameter {} - to give attributes to tag eg. {id:"heading"} 
-// //- 3rd parameter is children, either single element of array of elements
+// //- 3rd parameter is children, either single element(innerHtml) of array of elements
 
 // //- React.createElement("h1", {id: "heading"},"Welcome from react") creates a React element representing an <h1> element with a className attribute set to 'title' and containing the text 'Welcome from react'
 
 // console.log(React) //- core react library
 
 
-// console.log(heading) //- this is not a h1 tag, React element of type javascript object, props are children and attributes
+// console.log(heading) //- this is not a h1 tag, this is a React element of type javascript object, props are children and attributes
 
 // //- To put above h1 element to root id's child, we use ReactDOM library
-// //- So reacts need to have root to do all DOM rendering
-// //- we have to tell react that where to rendor code in dom
+// //- So react needs to have root to do all DOM rendering
+// //- we have to tell react that where to rendor code in DOM
 // const root = ReactDOM.createRoot(document.getElementById("root"))
 // //- this will create a root for our react library
 // //- this is the place where all react code will be rendor
@@ -53,7 +53,7 @@
 // </div> */}
 
 // //- React element is object and that becomes html when browser understands
-// //- while it is rendering at that time it is converting to html
+// //- while it is rendering at that time it is converted to html
 
 // const code = React.createElement("div",{id:"parent"},React.createElement("div",{id:"child"},[React.createElement("h1",{},"I am H1"),React.createElement("h2",{},"I am H2")]))
 
@@ -91,10 +91,12 @@
 const code = React.createElement("div", {
     id: "parent"
 }, [React.createElement("div", {
-    id: "child1"
-}, [React.createElement("h1", {}, "I am H1"), React.createElement("h2", {}, "I am H2")]), React.createElement("div", {
-    id: "child2"
-}, [React.createElement("h1", {}, "I am H1"), React.createElement("h2", {}, "I am H2")])])
+        id: "child1"
+    }, [React.createElement("h1", {}, "I am H1"), React.createElement("h2", {}, "I am H2")]),
+    React.createElement("div", {
+        id: "child2"
+    }, [React.createElement("h1", {}, "I am H1"), React.createElement("h2", {}, "I am H2")])
+])
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
